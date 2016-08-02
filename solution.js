@@ -17,10 +17,11 @@ var q = [
 ];
 
 function calculateTotal(itemQueue){
-
+var length = itemQueue.length;
 var total = 0;
-var counter = 1;
+var counter = 0;
 do {
+	
 	var discount = 0;
 	console.log("counter" +counter);
 	var item = q.shift();
@@ -37,7 +38,7 @@ do {
 	var discountPrice = item.price - discount;
 	total += discountPrice;
 	console.log("ITEM: " + item.name +" ORIGINAL PRICE: " + item.price + " DISCOUNT PRICE: " + discountPrice);
-} while (counter < q.length);
+} while (counter < length);
 
 console.log("TOTAL: " + total);
 }
